@@ -6,7 +6,7 @@
 }
 
 :root {
-	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
+	font-family: interface, sans-serif;
 	font-size: var(--fs-regular);
 	user-select: none;
 	-webkit-user-select: none;
@@ -14,25 +14,32 @@
 	--fs-tiny: 12px;
 	--fs-small: 14px;
 	--fs-regular: 16px;
-	--fs-medium: 20px;
-	--fs-large: 36px;
+	--fs-medium: 24px;
+	--fs-large: 32px;
+	--fs-huge: 45px;
 
 	--game-width: 500px;
+    --header-height: 70px;
 
-	--fg-primary: #d7dadc;
+	--fg-primary: #ffffff;
 	--fg-secondary: #818384;
-	--icon-color: #565758;
+	--icon-color: var(--fg-primary);
 	--border-primary: #3a3a3c;
 	--border-secondary: #272729;
+	--bg-tertiary: #1a1a1b;
 	--bg-secondary: #1a1a1b;
-	--bg-primary: #121213;
+	--bg-primary: #000000;
 	
+    --color-lime: rgb(195,240,0);
+    --color-mint: rgb(0,212,140);
 	--color-present: #b59f3b;
 	--color-correct: #538d4e;
 	--color-absent: var(--border-primary);
 	--evaluated-key-color: var(--fg-primary);
 	--key-bg: var(--fg-secondary);
-    --tile-font: 'Clear Sans', 'Helvetica Neue', Arial, sans-serif;
+    --logo-invert: invert(100%);
+
+    --tile-font: interface, sans-serif;
 }
 html {
     height: 100%;
@@ -52,6 +59,7 @@ body {
 	--icon-color: var(--fg-primary);
 	--border-primary: #d3d6da;
 	--border-secondary: var(--border-primary);
+	--bg-tertiary: #ffffff;
 	--bg-secondary: #e0e0e0;
 	--bg-primary: #ffffff;
 
@@ -60,6 +68,8 @@ body {
     --color-absent: var(--fg-secondary);
 	--evaluated-key-color: var(--bg-primary);
 	--key-bg: var(--border-primary);
+    --logo-invert: invert(0%);
+    
 }
 
 .colorblind {
@@ -71,6 +81,8 @@ h3 {
 	text-align: center;
 	text-transform: uppercase;
 	margin-bottom: 10px;
+    font-size: var(--fs-medium);
+    letter-spacing: 1px;
 }
 .absent,
 .present,
@@ -89,4 +101,9 @@ a:visited {
     align-items: center;
     text-align: center;
     vertical-align: middle;
+}
+@media (max-width: 700px) { 
+    :root {
+        --header-height: 90px;
+    }
 }
