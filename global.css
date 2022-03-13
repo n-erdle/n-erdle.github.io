@@ -20,6 +20,7 @@
 
 	--game-width: 500px;
     --header-height: 70px;
+    --keyboard-height: 186px;
 
 	--fg-primary: #ffffff;
 	--fg-secondary: #818384;
@@ -107,3 +108,8 @@ a:visited {
         --header-height: 90px;
     }
 }
+@media (max-height: 600px) {
+    :root {
+        --keyboard-height: 126px;
+    }
+} 
